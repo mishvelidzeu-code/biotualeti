@@ -7,21 +7,26 @@
 
 <title>ბიო ტუალეტის გაქირავება | სწრაფი სერვისი</title>
 <meta name="description" content="ბიო ტუალეტების გაქირავება ღონისძიებებისთვის, მშენებლობებისთვის და კერძო ობიექტებისთვის.">
-<link rel="canonical" href="https://biotualeti.ge/">
+<link rel="canonical" href="https://biotoilet.ge/">
+
 <link rel="icon" type="image/png" href="images/favicon.png">
 
 <meta property="og:title" content="ბიო ტუალეტის გაქირავება | სწრაფი სერვისი">
 <meta property="og:description" content="ბიო ტუალეტების გაქირავება ღონისძიებებისთვის, მშენებლობებისთვის და კერძო ობიექტებისთვის თბილისსა და რეგიონებში.">
-<meta property="og:image" content="https://biotualeti.ge/images/1.webp">
-<meta property="og:url" content="https://biotualeti.ge/">
+<meta property="og:image" content="https://biotoilet.ge/images/1.webp">
+
+<meta property="og:url" content="https://biotoilet.ge/">
+
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "ბიო ტუალეტის გაქირავება",
-  "image": "https://biotualeti.ge/images/1.webp",
-  "url": "https://biotualeti.ge/",
+  "image": "https://biotoilet.ge/images/1.webp",
+
+  "url": "https://biotoilet.ge/",
+
   "telephone": "+995599308414",
   "address": {
     "@type": "PostalAddress",
@@ -241,6 +246,54 @@ footer{
     height:330px;
   }
 }
+.logo{
+  font-size:1.2em;
+  font-weight:bold;
+  color:white;
+  text-decoration:none;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+}
+
+.nav-links{
+  display:flex;
+  gap:15px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+  nav{
+    position:relative;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    background:#0f766e;
+    position:absolute;
+    top:60px;
+    right:0;
+    width:200px;
+    padding:15px;
+    border-radius:8px;
+  }
+
+  .nav-links a{
+    margin:10px 0;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+}
+
 </style>
 </head>
 
@@ -249,15 +302,17 @@ footer{
 <header>
 <div class="container">
 <nav>
-<div style="font-size:1.2em; font-weight:bold; color:white;">
-ბიო ტუალეტები
-</div>
 
-<div>
+<a href="/" class="logo">ბიო ტუალეტები</a>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
 <a href="#services">სერვისები</a>
 <a href="#prices">ფასები</a>
 <a href="#contact">კონტაქტი</a>
 </div>
+
 </nav>
 </div>
 </header>
@@ -413,12 +468,22 @@ var name = document.getElementById('name').value;
 var phone = document.getElementById('phone').value;
 var message = document.getElementById('message').value;
 
-var text='📍 biotualeti.ge შეკვეთა%0Aსახელი: '+name+
+var text='📍 biotoilet.ge შეკვეთა%0Aსახელი: '+name+
+
 '%0Aტელეფონი: '+phone+
 '%0Aმესიჯი: '+message;
 
 window.open('https://wa.me/995599308414?text='+text,'_blank');
 }
+function toggleMenu(){
+  var menu = document.getElementById("navLinks");
+  if(menu.style.display === "flex"){
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
+
 </script>
 
 </body>
