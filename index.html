@@ -220,6 +220,7 @@ footer{
   padding:20px
 }
 
+/* ===== FLOATING BUTTONS ===== */
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -234,6 +235,31 @@ footer{
   z-index:999
 }
 
+.phone-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #0f766e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: pulse-phone 2s infinite;
+}
+
+@keyframes pulse-phone {
+  0% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(15, 118, 110, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0); }
+}
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:900px){
   .hero-grid{
@@ -244,6 +270,10 @@ footer{
     margin:30px auto 0;
     width:250px;
     height:330px;
+  }
+  .phone-float {
+    font-size: 16px;
+    padding: 10px 16px;
   }
 }
 .logo{
@@ -458,6 +488,7 @@ alt="ბიო ტუალეტი აგარაკებისა და �
 © 2026 ბიო ტუალეტის გაქირავება
 </footer>
 
+<a class="phone-float" href="tel:+995599308414">📞 599 308 414</a>
 <a class="whatsapp-float" href="https://wa.me/995599308414">💬</a>
 
 <script>
