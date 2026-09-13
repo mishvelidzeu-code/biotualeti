@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://biotualeti.ge/sitemap.xml
+Sitemap: https://biotoilet.ge/sitemap.xml
